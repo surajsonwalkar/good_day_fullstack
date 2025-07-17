@@ -1,9 +1,11 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 import requests
 import os
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 # Replace with your Panchang API Key
 PANCHANG_API_KEY = os.environ.get("PANCHANG_API_KEY")
