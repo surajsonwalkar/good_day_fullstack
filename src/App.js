@@ -12,7 +12,7 @@ export default function App() {
     setResponse("");
     try {
       const event = eventType === "other" ? customEvent : eventType;
-      const res = await fetch(process.env.REACT_APP_API_URL + "/check_day", {
+      const res = await fetch("https://good-day-fullstack-2.onrender.com/check_day", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ event, date: date || "today" }),
